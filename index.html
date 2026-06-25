@@ -44,6 +44,9 @@
   .b-amber { background: #fffbe6; color: #854f0b; border: 1px solid #ffd666; }
   .b-blue  { background: #e6f1fb; color: #0c447c; border: 1px solid #b5d4f4; }
   .b-green { background: #e1f5ee; color: #085041; border: 1px solid #9fe1cb; }
+  .b-urgent { background: #e82020; color: #fff; border: 1px solid #c00; }
+  .item.urgent { border-color: #ffaaaa; background: #fff8f8; }
+  .item.urgent:hover { background: #fff0f0; }
 </style>
 </head>
 <body>
@@ -67,7 +70,7 @@
   </div>
 
   <div class="section">
-    <div class="section-head">🎖 공식행사 오전 — 카메라 A+B 모두</div>
+    <div class="section-head">🎖 공식행사 오전</div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">테이프커팅 퍼포먼스·장소 이동</div>
       <div class="i-meta">10:20–10:25 · 4홀 입구 / 01_공식행사 › 02_로비 테이프커팅</div>
@@ -76,17 +79,21 @@
       <div class="i-title">테이프커팅 본행사 (주요인사)</div>
       <div class="i-meta">10:25–10:30 · 4홀 입구</div>
     </label></div>
-    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
-      <div class="i-title">전시투어 — 포스터세션·특별관·수상기업 부스</div>
+    <div class="item urgent" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title"><span class="badge b-urgent">현장 요청</span>전시투어 — PD님 발표 장면 (나노융합 R&D 성과홍보관) · 10장 내외 추려서 전달</div>
       <div class="i-meta">10:30–11:05 · 3·4홀 / 01_공식행사 › 03_전시투어</div>
+    </label></div>
+    <div class="item urgent" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title"><span class="badge b-urgent">현장 요청</span>공식행사 전반 — 과기부·산업부 관계자 중심 사진</div>
+      <div class="i-meta">공식행사 전반 · 강연장A</div>
     </label></div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">개회식 — 개회사·내빈소개·환영사·축사</div>
       <div class="i-meta">11:07–11:30 · 강연장A / 01_공식행사 › 04_개막식 및 시상식</div>
     </label></div>
-    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
-      <div class="i-title">시상식 — 국무총리상·장관상·기관장상</div>
-      <div class="i-meta">11:30–12:00 · 강연장A</div>
+    <div class="item urgent" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title"><span class="badge b-urgent">현장 요청</span>시상식 — 원장님 시상 장면 · 10장 내외 추려서 전달</div>
+      <div class="i-meta">11:30–12:00 · 강연장A / 국무총리상·장관상·기관장상</div>
     </label></div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">시상식 기념촬영</div>
@@ -99,10 +106,10 @@
   </div>
 
   <div class="section">
-    <div class="section-head">🎙 aving 인터뷰 스케치 — 나노바이오 인근 30개사 · 오전~오후 종일</div>
+    <div class="section-head">🤝 해외바이어 초청상담회</div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
-      <div class="i-title"><span class="badge b-green">△ 발견 시</span>인터뷰 진행 장면 스케치 (부스 내 세팅·인터뷰이 반응 등)</div>
-      <div class="i-meta">4홀 나노바이오 인근 / 인터뷰 중인 곳 발견 시</div>
+      <div class="i-title">해외바이어 초청상담회</div>
+      <div class="i-meta">10:00–16:00 · 상담장</div>
     </label></div>
   </div>
 
@@ -119,38 +126,46 @@
   </div>
 
   <div class="section">
-    <div class="section-head">📋 기조강연</div>
+    <div class="section-head">📋 스마트센서 세미나 (302호)</div>
+    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title">등록 데스크·시작 장면·발표 장면 일부</div>
+      <div class="i-meta">13:30 개회 · 302호 / 03_프로그램 › 스마트센서 산업화세미나</div>
+    </label></div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">📋 기조강연 (3F 그랜드볼룸)</div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">등록 데스크 + 현장</div>
       <div class="i-meta">14:00 · KINTEX 제1전시장 3F 그랜드볼룸</div>
     </label></div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">기조강연 (산업부문)</div>
-      <div class="i-meta">14:00–14:50 · 3F 그랜드볼룸</div>
+      <div class="i-meta">14:00–14:50</div>
     </label></div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">기조강연 (연구부문)</div>
-      <div class="i-meta">14:50–15:40 · 3F 그랜드볼룸</div>
+      <div class="i-meta">14:50–15:40</div>
     </label></div>
   </div>
 
   <div class="section">
-    <div class="section-head">📋 세미나·상담·이벤트</div>
-    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
-      <div class="i-title">스마트센서 세미나 — 등록 데스크·시작 장면·발표 장면 일부</div>
-      <div class="i-meta">13:30 개회 · 302호 / 03_프로그램 › 스마트센서 산업화세미나</div>
-    </label></div>
-    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
-      <div class="i-title">해외바이어 초청상담회</div>
-      <div class="i-meta">10:00–16:00 · 상담장</div>
-    </label></div>
+    <div class="section-head">🎤 [바이오] 신기술/신제품 설명회 (4홀 오픈스테이지B)</div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">[바이오] 참가기업 신기술/신제품 설명회</div>
       <div class="i-meta">14:00–16:00 · 4홀 오픈스테이지B</div>
     </label></div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">📌 기타</div>
+    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title"><span class="badge b-green">△ 발견 시</span>aving 인터뷰 스케치 (나노바이오 인근 30개사)</div>
+      <div class="i-meta">4홀 나노바이오 인근 · 종일</div>
+    </label></div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title"><span class="badge b-green">△ 발견 시</span>나노바이오 스탬프투어 참여 관람객</div>
-      <div class="i-meta">나노바이오 구역 인근 / 이벤트 참여 장면 포착 시</div>
+      <div class="i-meta">나노바이오 구역 인근</div>
     </label></div>
   </div>
 </div>
@@ -184,8 +199,8 @@
       <div class="i-title">등록 데스크</div>
       <div class="i-meta">강연장B 입구</div>
     </label></div>
-    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
-      <div class="i-title">이승환 교수 (강원대) — 환영사</div>
+    <div class="item urgent" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title"><span class="badge b-urgent">현장 요청</span>이승환 교수 (강원대) — 환영사</div>
       <div class="i-meta">10:00–10:05</div>
     </label></div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
@@ -203,6 +218,10 @@
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">명재욱 교수 (KAIST) — 폐자원 기반 나노셀룰로오스 소재의 전주기 설계</div>
       <div class="i-meta">10:50–11:20</div>
+    </label></div>
+    <div class="item urgent" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title"><span class="badge b-urgent">현장 요청</span>점심시간 단체사진</div>
+      <div class="i-meta">11:20–12:50 Break time 중 · 강연장B</div>
     </label></div>
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">박은주 CTO (대봉엘에스 연구소) — 치료에서 아름다움까지</div>
@@ -235,10 +254,6 @@
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">임완희 교수 (충북대) — 사차아민화처리를 통한 나노셀룰로오스 기능화</div>
       <div class="i-meta">15:20–15:40</div>
-    </label></div>
-    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
-      <div class="i-title">폐회</div>
-      <div class="i-meta">15:40</div>
     </label></div>
   </div>
 
@@ -339,6 +354,10 @@
     <div class="item" onclick="chk(this)"><input type="checkbox"><label>
       <div class="i-title">로비 스케치</div>
       <div class="i-meta">3·4홀 로비</div>
+    </label></div>
+    <div class="item" onclick="chk(this)"><input type="checkbox"><label>
+      <div class="i-title">모든 부스 개별 촬영 (전 구역 전수)</div>
+      <div class="i-meta">나노·레이저·접착코팅필름·첨단세라믹·스마트센서·적층제조·에너지계측·나노바이오·성과홍보관·포스터세션 등 / 02_전시회</div>
     </label></div>
   </div>
 
